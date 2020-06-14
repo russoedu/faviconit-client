@@ -1,4 +1,4 @@
-# Faviconit
+# Faviconit React Client
 
 
 # TODO
