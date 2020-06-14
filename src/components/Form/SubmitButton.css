@@ -1,0 +1,24 @@
+/************************ Submit Button ************************/
+#faviconit {
+  transition: all cubic-bezier(.5, .3, .2, 1) .2s;
+  margin-top: 20px;
+}
+#faviconit.ltr {
+  float: right;
+}
+
+#faviconit.rtl {
+  float: left;
+}
+
+.btn.disabled, .btn:disabled {
+  cursor: default;
+}
+
+.btn-outline-primary:hover:disabled, .btn-outline-primary:active:disabled, .btn-outline-primary.disabled, .btn-outline-primary:disabled {
+  background-color: #d0d0d0!important;
+  border-color: #464545!important;
+}
+#faviconit:disabled > span, #faviconit:disabled > span > span {
+  color: #464545;
+}

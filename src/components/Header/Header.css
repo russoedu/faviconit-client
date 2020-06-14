@@ -1,0 +1,13 @@
+/************************ Header ************************/
+.navbar {
+  background-color: var(--colour-dark-blue);
+  height: 56px;
+}
+.social-button {
+  padding-top: 6px;
+}
+.nav-item {
+  margin-right: 10px;
+  bottom: 0;
+  height: 40px;
+}

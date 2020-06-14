@@ -1,0 +1,10 @@
+/************************ Input ************************/
+.col-form-label {
+  padding-top: 12px;
+}
+.col-form-label.ltr {
+  text-align: right;
+}
+.col-form-label.rtl {
+  text-align: left;
+}
