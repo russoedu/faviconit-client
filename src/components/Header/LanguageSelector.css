@@ -16,6 +16,8 @@
 #language-selector .language-selector-text {
   padding: 0 5px;
   vertical-align: text-bottom;
+  bottom: 3px;
+  position: relative;
 }
 
 /* Menu */
