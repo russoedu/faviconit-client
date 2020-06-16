@@ -1,5 +1,6 @@
 /* eslint-disable no-useless-escape */
 import React, { useState, useEffect } from 'react'
+import { useSelector } from 'react-redux'
 import { useTranslation } from 'react-i18next'
 
 import { InputImage, Input, AdvancedFormGroup, SubmitButton } from '.'
@@ -9,6 +10,8 @@ import './Form.css'
 
 export function Form () {
   const { t } = useTranslation()
+  const language = useSelector(state => state.language)
+
   const displayAdvancedState = useState(false)
   const displayAdvanced = displayAdvancedState[0]
 
@@ -21,13 +24,7 @@ export function Form () {
   const name = nameState[0]
   const validNameState = useState(true)
   const validName = validNameState[0]
-  const nameValidation = /^[a-zA-Z0-9\.\-\_]*$/g
-
-  const versionState = useState('')
-  const version = versionState[0]
-  const validVersionState = useState(true)
-  const validVersion = validVersionState[0]
-  const versionValidation = /^[a-zA-Z0-9\.\-\_]*$/g
+  const nameValidation = /^[a-zA-Z0-9\.\-\_\ ]*$/g
 
   const folderState = useState('')
   const folder = folderState[0]
@@ -42,16 +39,14 @@ export function Form () {
     const formData = new FormData()
     if (displayAdvanced) {
       if (name !== '') {
-        formData.set('faviconName', name)
-      }
-      if (version !== '') {
-        formData.set('faviconVersion', version)
+        formData.set('appName', name)
       }
       if (folder !== '') {
         formData.set('faviconFolder', folder)
       }
     }
 
+    formData.set('language', language.selected.key)
     formData.append('faviconFile', file.src.file)
 
     for (const key of formData.keys()) {
@@ -61,9 +56,9 @@ export function Form () {
   }
 
   useEffect(() => {
-    const isValid = validFile && (!displayAdvanced || (validName && validFolder && validVersion))
+    const isValid = validFile && (!displayAdvanced || (validName && validFolder))
     setFormValid(isValid)
-  }, [validFile, displayAdvanced, validName, validFolder, validVersion])
+  }, [validFile, displayAdvanced, validName, validFolder])
 
   return (
     <>
@@ -75,8 +70,7 @@ export function Form () {
           <form onSubmit={handleSubmit}>
             <InputImage inputState={fileState} validState={validFileState}/>
             <AdvancedFormGroup displayAdvancedState={displayAdvancedState}>
-              <Input id='name' inputState={nameState} validState={validNameState} validation={nameValidation} placeholder="icon"/>
-              <Input id='version' inputState={versionState} validState={validVersionState} validation={versionValidation} placeholder="1.0_beta"/>
+              <Input id='name' inputState={nameState} validState={validNameState} validation={nameValidation} placeholder="app"/>
               <Input id='folder' inputState={folderState} validState={validFolderState} validation={folderValidation} placeholder="/static/favicons"/>
             </AdvancedFormGroup>
             <SubmitButton formValid={formValid}/>

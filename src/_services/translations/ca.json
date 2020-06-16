@@ -31,19 +31,14 @@
         "uploadError": "disculpi, alguna cosa ha anat malament :( si us plau, prova-ho penjant la imatge una altre vegada!"
       },
       "name": {
-        "title": "nom del favicon",
-        "help": "només es permeten lletres, números, punts i els guions - i _",
-        "placeholder": "deixa-ho en blanc per utilitzar \"favicon\" com a nom"
+        "title": "nom de l'aplicació",
+        "help": "només es permeten lletres, números, '.', '-', '_' i ' '",
+        "placeholder": "deixa-ho en blanc per utilitzar \"app\" com a nom"
       },
       "folder": {
         "title": "carpeta del favicon",
         "help": "només es permeten lletres, números, ':', '.', i '/'",
         "placeholder": "deixa-ho en blanc si vols mantenir el favicon en la carpeta arrel"
-      },
-      "version": {
-        "title": "versió del favicon",
-        "help": "només es permeten lletres, números, punts i els guions - i _",
-        "placeholder": "deixa-ho en blanc si no ho vols utilitzar"
       },
       "advancedAccordionColapsed": "avançat",
       "advancedAccordionExpanded": "regular"

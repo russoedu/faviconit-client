@@ -31,19 +31,14 @@
         "uploadError": "hupsis, jotain meni vikaan :( yritä uudelleen!"
       },
       "name": {
-        "title": "faviconin nimi",
-        "help": "vain kirjaimet, numerot, '.', '_' ja  '_' ovat sallittuja",
-        "placeholder": "jätä tyhjäksi jos haluat nimeksi \"favicon\""
+        "title": "sovelluksen nimi",
+        "help": "vain kirjaimet, numerot, '.', '-', '_' ja  ' ' ovat sallittuja",
+        "placeholder": "jätä tyhjäksi jos haluat nimeksi \"app\""
       },
       "folder": {
         "title": "faviconin kansio",
         "help": "vain kirjaimet, numerot, ':', '.', ja '/' ovat sallittuja",
         "placeholder": "jätä tyhjäksi jos haluat käyttää root kansiota"
-      },
-      "version": {
-        "title": "faviconin versio",
-        "help": "vain kirjaimet, numerot, '.', '_' ja  '_' ovat sallittuja",
-        "placeholder": "jätä tyhjäksi jos et halua käyttää tätä"
       },
       "advancedAccordionColapsed": "kehittynyt",
       "advancedAccordionExpanded": "normaali"

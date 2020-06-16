@@ -31,9 +31,9 @@
         "uploadError": "chyba pri pokuse o uloženie obrázku. prosím, skúste to znova."
       },
       "name": {
-        "title": "favicon meno",
-        "help": "povolené sú len písmená, čísla, '.', '-' a '_' ",
-        "placeholder": "ponechajte prázdne, ak chcete použiť \"favicon\" ako meno"
+        "title": "názov aplikácie",
+        "help": "povolené sú len písmená, čísla, '.', '-', '_' a ' '",
+        "placeholder": "ponechajte prázdne, ak chcete použiť \"app\" ako meno"
       },
       "folder": {
         "title": "favicon adresár",

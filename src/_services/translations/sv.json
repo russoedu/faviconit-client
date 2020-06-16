@@ -31,9 +31,9 @@
         "uploadError": "försöket att spara bilden misslyckades. var snäll försök igen."
       },
       "name": {
-        "title": "favicon-namn",
-        "help": "bara bokstäver, siffror, '.', '-' och '_'  är tillåtna",
-        "placeholder": "lämna tomt för att använda namnet \"favicon\""
+        "title": "applikationsnamn",
+        "help": "bara bokstäver, siffror, '.', '-', '_' och ' '  är tillåtna",
+        "placeholder": "lämna tomt för att använda namnet \"app\""
       },
       "folder": {
         "title": "favicon-mapp (katalog)",

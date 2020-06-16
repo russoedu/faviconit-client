@@ -31,19 +31,14 @@
         "uploadError": "Entschuldigung, es hat nicht geklappt :( Bitte versuche Dein Bild erneut hochzuladen!"
       },
       "name": {
-        "title": "Name des Favicons",
-        "help": "Nur Buchstaben, Zahlen, '.', '-' und '_' sind erlaubt",
-        "placeholder": "Freilassen, um \"favicon\" als Name zu verwenden"
+        "title": "Anwendungsname",
+        "help": "Nur Buchstaben, Zahlen, '.', '-', '_' und ' ' sind erlaubt",
+        "placeholder": "Freilassen, um \"app\" als Name zu verwenden"
       },
       "folder": {
         "title": "Favicon Ordner",
         "help": "Nur Buchstaben, Zahlen, ':', '.', und '/' sind erlaubt",
         "placeholder": "Frei lassen, um den Standardordner zu benutzen"
-      },
-      "version": {
-        "title": "Version des Favicons",
-        "help": "Nur Buchstaben, Zahlen, '.', '-' und '_' sind erlaubt",
-        "placeholder": "Freilassen, wenn Du das nicht verwenden möchtest"
       },
       "advancedAccordionColapsed": "fortgeschritten",
       "advancedAccordionExpanded": "normal"

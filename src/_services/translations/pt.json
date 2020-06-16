@@ -31,9 +31,9 @@
         "uploadError": "erro ao salvar a imagem. por favor, tente novamente."
       },
       "name": {
-        "title": "nome do favicon",
-        "help": "apenas letras, números, '.', '-' e '_' são permitidos",
-        "placeholder": "deixe em branco para usar \"favicon\" como nome"
+        "title": "nome do app",
+        "help": "apenas letras, números, '.', '-', '_' e ' ' são permitidos",
+        "placeholder": "deixe em branco para usar \"app\" como nome"
       },
       "folder": {
         "title": "pasta do favicon",

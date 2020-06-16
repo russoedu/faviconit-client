@@ -31,19 +31,14 @@
         "uploadError": "sorry, something was wrong :( please, try uploading your image again!"
       },
       "name": {
-        "title": "favicon name",
-        "help": "only letters, numbers, '.', '-' and '_' allowed",
-        "placeholder": "leave blank to use \"favicon\" as name"
+        "title": "app name",
+        "help": "only letters, numbers, '.', '-', '_' and ' ' allowed",
+        "placeholder": "leave blank to use \"app\" as name"
       },
       "folder": {
         "title": "favicon folder",
         "help": "only letters, numbers, ':', '.', and '/' allowed",
         "placeholder": "leave blank to use the root folder"
-      },
-      "version": {
-        "title": "favicon version",
-        "help": "only letters, numbers, '.', '-' and '_' allowed",
-        "placeholder": "leave blank if you don't want to use this"
       },
       "advancedAccordionColapsed": "advanced",
       "advancedAccordionExpanded": "regular"

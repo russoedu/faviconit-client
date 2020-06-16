@@ -31,19 +31,14 @@
         "uploadError": "hubo un error al salvar la imagen. por favor, intente de nuevo."
       },
       "name": {
-        "title": "nombre del favicon",
-        "help": "usar apenas letras, números, '.', '-'y '_'.",
-        "placeholder": "deje en blanco para usar \"favicon\" como nombre"
+        "title": "nombre de la aplicación",
+        "help": "usar apenas letras, números, '.', '-', '_' y ' '",
+        "placeholder": "deje en blanco para usar \"app\" como nombre"
       },
       "folder": {
         "title": "carpeta del favicon",
         "help": "usar apenas letras, números, ':', '.', y '/'",
         "placeholder": "deje en blanco para mantener el favicon en la carpeta raíz"
-      },
-      "version": {
-        "title": "versión favicon",
-        "help": "usar apenas letras, números, '.', '-'y '_'.",
-        "placeholder": "deje en blanco se no lo quiere usar"
       },
       "advancedAccordionColapsed": "avanzado",
       "advancedAccordionExpanded": "regular"

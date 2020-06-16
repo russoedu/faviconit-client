@@ -31,9 +31,9 @@
         "uploadError": "błąd podczas próby zapisania grafiki. spróbuj ponownie."
       },
       "name": {
-        "title": "nazwa favicony",
-        "help": "dozwolone tylko litery, cyfry, '.', '-' i '_'",
-        "placeholder": "pozostaw puste by użyć \"favicon\" jako nazwę"
+        "title": "nazwa aplikacji",
+        "help": "dozwolone tylko litery, cyfry, '.', '-', '_' i ' '",
+        "placeholder": "pozostaw puste by użyć \"app\" jako nazwę"
       },
       "folder": {
         "title": "folder favicony",

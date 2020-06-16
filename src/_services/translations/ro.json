@@ -31,9 +31,9 @@
         "uploadError": "eroare la încercarea de a salva imaginea. vă rugam, încercați din nou."
       },
       "name": {
-        "title": "numele favicon",
-        "help": "numai litere, numere, '.', '-' și '_' sunt autorizate",
-        "placeholder": "lăsați liber ca sa utilizați \"favicon\" ca nume"
+        "title": "numele aplicatiei",
+        "help": "numai litere, numere, '.', '-', '_' și ' ' sunt autorizate",
+        "placeholder": "lăsați liber ca sa utilizați \"app\" ca nume"
       },
       "folder": {
         "title": "dosarul favicon",

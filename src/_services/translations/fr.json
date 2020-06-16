@@ -31,19 +31,14 @@
         "uploadError": "désolé, une erreur est survenue :( n'hésitez pas à réessayer!"
       },
       "name": {
-        "title": "nom du favicon",
-        "help": "les seuls caractères autorisés sont les lettres, les chiffres et les caractères ''.', '-' et '_'.",
-        "placeholder": "laisser vide pour utiliser le nom \"favicon\""
+        "title": "nom de l'application",
+        "help": "les seuls caractères autorisés sont les lettres, les chiffres et les caractères ''.', '-', '_' et ' '.",
+        "placeholder": "laisser vide pour utiliser le nom \"app\""
       },
       "folder": {
         "title": "dossier du favicon",
         "help": "les seuls caractères autorisés sont les lettres, les chiffres et les caractères ':', '.', '-', '_' and '/' allowed",
         "placeholder": "laisser vide pour laisser le favicon à la racine"
-      },
-      "version": {
-        "title": "version du favicon",
-        "help": "les seuls caractères autorisés sont les lettres, les chiffres et les caractères '.', '-' et '_'.",
-        "placeholder": "laisser vide si vous ne voulez pas l'utiliser"
       },
       "advancedAccordionColapsed": "avancé",
       "advancedAccordionExpanded": "régulier"

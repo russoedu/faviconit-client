@@ -31,9 +31,9 @@
         "uploadError": "fout met het opslaan van de afbeelding. probeer het alstublieft opnieuw."
       },
       "name": {
-        "title": "favicon naam",
-        "help": "gebruik alleen letters, nummers, '.', '-' en '_'",
-        "placeholder": "laat leeg om \"favicon\" te gebruiken als naam"
+        "title": "naam van de toepassing",
+        "help": "gebruik alleen letters, nummers, '.', '-', '_' en ' '",
+        "placeholder": "laat leeg om \"app\" te gebruiken als naam"
       },
       "folder": {
         "title": "favicon folder",

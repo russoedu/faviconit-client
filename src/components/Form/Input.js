@@ -1,11 +1,14 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+import { useTranslation } from 'react-i18next'
 
 import { FormGroup } from '.'
 import { FormService } from '../../_services'
 import './Input.css'
 
-export function Input ({ id, inputState, validState, validation, placeholder = '' }) {
+export function Input ({ id, inputState, validState, validation }) {
+  const { t } = useTranslation()
+  const placeholder = `home.form.${id}.placeholder`
   const [inputValue, setInputValue] = inputState
   const [isValid, setValid] = validState
   const invalidText = {
@@ -22,8 +25,7 @@ export function Input ({ id, inputState, validState, validation, placeholder = '
     id: PropTypes.string.isRequired,
     inputState: PropTypes.array.isRequired,
     validState: PropTypes.array.isRequired,
-    validation: PropTypes.object.isRequired,
-    placeholder: PropTypes.string
+    validation: PropTypes.object.isRequired
   }
 
   const handleInputChange = (event) => {
@@ -41,7 +43,7 @@ export function Input ({ id, inputState, validState, validation, placeholder = '
         aria-describedby={id + 'Help'}
         value={inputValue}
         onChange={handleInputChange}
-        placeholder={placeholder}
+        placeholder={t(placeholder)}
       />
     </FormGroup>
   )

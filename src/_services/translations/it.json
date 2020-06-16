@@ -31,9 +31,9 @@
         "uploadError": "si è verificato un errore nel salvataggio dell'immagine. per favore, prova di nuovo."
       },
       "name": {
-        "title": "nome favicon",
-        "help": "sono ammessi solo numeri, lettere, '.', '-' e '_'",
-        "placeholder": "lascia vuoto per usare \"favicon\" come nome"
+        "title": "nome dell'applicazione",
+        "help": "sono ammessi solo numeri, lettere, '.', '-', '_' e ' '",
+        "placeholder": "lascia vuoto per usare \"app\" come nome"
       },
       "folder": {
         "title": "cartella favicon",
