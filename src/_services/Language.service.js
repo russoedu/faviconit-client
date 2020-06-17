@@ -5,23 +5,23 @@ import LanguageDetector from 'i18next-browser-languagedetector'
 import { LanguageActions } from '../_actions'
 import { store } from '../_helpers'
 
-import ar from './translations/ar.json'
-import ca from './translations/ca.json'
-import de from './translations/de.json'
-import el from './translations/el.json'
-import en from './translations/en.json'
-import es from './translations/es.json'
-import fi from './translations/fi.json'
-import fr from './translations/fr.json'
-import it from './translations/it.json'
-import nl from './translations/nl.json'
-import pl from './translations/pl.json'
-import pt from './translations/pt.json'
-import ro from './translations/ro.json'
-import ru from './translations/ru.json'
-import sk from './translations/sk.json'
-import sv from './translations/sv.json'
-import zh from './translations/zh.json'
+import translationAr from './translations/ar.json'
+import translationCa from './translations/ca.json'
+import translationDe from './translations/de.json'
+import translationEl from './translations/el.json'
+import translationEn from './translations/en.json'
+import translationEs from './translations/es.json'
+import translationFi from './translations/fi.json'
+import translationFr from './translations/fr.json'
+import translationIt from './translations/it.json'
+import translationNl from './translations/nl.json'
+import translationPl from './translations/pl.json'
+import translationPt from './translations/pt.json'
+import translationRo from './translations/ro.json'
+import translationRu from './translations/ru.json'
+import translationSk from './translations/sk.json'
+import translationSv from './translations/sv.json'
+import translationZh from './translations/zh.json'
 
 export class LanguageService {
   list = [
@@ -52,23 +52,23 @@ export class LanguageService {
       .init(
         {
           resources: {
-            ar: { translation: ar },
-            ca: { translation: ca },
-            de: { translation: de },
-            el: { translation: el },
-            en: { translation: en },
-            es: { translation: es },
-            fi: { translation: fi },
-            fr: { translation: fr },
-            it: { translation: it },
-            nl: { translation: nl },
-            pl: { translation: pl },
-            pt: { translation: pt },
-            ro: { translation: ro },
-            ru: { translation: ru },
-            sk: { translation: sk },
-            sv: { translation: sv },
-            zh: { translation: zh }
+            ar: { translation: translationAr },
+            ca: { translation: translationCa },
+            de: { translation: translationDe },
+            el: { translation: translationEl },
+            en: { translation: translationEn },
+            es: { translation: translationEs },
+            fi: { translation: translationFi },
+            fr: { translation: translationFr },
+            it: { translation: translationIt },
+            nl: { translation: translationNl },
+            pl: { translation: translationPl },
+            pt: { translation: translationPt },
+            ro: { translation: translationRo },
+            ru: { translation: translationRu },
+            sk: { translation: translationSk },
+            sv: { translation: translationSv },
+            zh: { translation: translationZh }
           },
           fallbackLng: ['ar', 'ca', 'de', 'el', 'en', 'es', 'fi', 'fr', 'it', 'nl', 'pl', 'pt', 'ro', 'ru', 'sk', 'sv', 'zh'],
           react: {
