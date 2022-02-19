@@ -1,0 +1,49 @@
+{
+  "folders": [
+    {
+      "path": "."
+    }
+  ],
+  "settings": {
+    "files.exclude": {
+      // ".editorconfig": true,
+      // ".gitignore": true,
+      // "node_modules": true,
+      // "package-lock.json": true,
+      // ".eslintignore": true
+    },
+    "favorites.resources": [
+      "src/App.js",
+      "package.json",
+      ".eslintrc.js"
+    ]
+  },
+  "launch": {
+    "configurations": [
+      {
+        "command": "npm start",
+        "name": "Start",
+        "request": "launch",
+        "type": "node-terminal"
+      },
+      {
+        "command": "npm run build",
+        "name": "Build",
+        "request": "launch",
+        "type": "node-terminal"
+      },
+      {
+        "command": "npm test",
+        "name": "Test",
+        "request": "launch",
+        "type": "node-terminal"
+      },
+      {
+        "command": "npx serve -s build",
+        "name": "Serve build",
+        "request": "launch",
+        "type": "node-terminal"
+      }
+    ]
+  }
+}

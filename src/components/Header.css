@@ -1,0 +1,11 @@
+nav {
+  display: flex;
+}
+.navbar-item {
+  /* flex-grow: 0; */
+  padding-right: 1em;
+}
+
+.header-language-selector {
+  margin-left: 1em;
+}

@@ -1,0 +1,21 @@
+.logo {
+  flex-grow: 4;
+  height: 60px;
+  margin: 1em 0;
+}
+
+.logo img {
+  height: 60px;
+}
+.logo-small {
+  display: none;
+}
+
+@media (max-width: 800px) {
+  .logo-large {
+    display: none;
+  }
+  .logo-small {
+    display: block;
+  }
+}

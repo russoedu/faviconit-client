@@ -1,0 +1,21 @@
+.cc-red {
+  color: red;
+}
+
+.cc-green {
+  color: green;
+}
+
+.cc-blue {
+  color: blue;
+}
+
+.cc-code {
+  background: white;
+  display: inline;
+  color: black;
+  padding: 0.4em;
+  margin: 0;
+  display: inline-block;
+  vertical-align: middle;
+}
