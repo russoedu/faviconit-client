@@ -6,11 +6,11 @@
   ],
   "settings": {
     "files.exclude": {
-      // ".editorconfig": true,
-      // ".gitignore": true,
-      // "node_modules": true,
-      // "package-lock.json": true,
-      // ".eslintignore": true
+      ".editorconfig": true,
+      ".gitignore": true,
+      "node_modules": true,
+      "package-lock.json": true,
+      ".eslintignore": true
     },
     "favorites.resources": [
       "src/App.js",
