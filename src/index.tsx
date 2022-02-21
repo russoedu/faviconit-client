@@ -10,6 +10,8 @@ import * as serviceWorker from './serviceWorker'
 import CssBaseline from '@mui/material/CssBaseline'
 import { createTheme, ThemeProvider } from '@mui/material'
 import './index.css'
+import { I18nextProvider } from 'react-i18next'
+import i18n from './i18n/i18n'
 
 const theme = createTheme({
   palette: {
@@ -37,13 +39,15 @@ const theme = createTheme({
 
 ReactDOM.render(
   <React.StrictMode>
-    <Provider store={store}>
-      <ThemeProvider theme={theme}>
-        <CssBaseline>
-          <App />
-        </CssBaseline>
-      </ThemeProvider>
-    </Provider>
+    <I18nextProvider i18n={i18n}>
+      <Provider store={store}>
+        <ThemeProvider theme={theme}>
+          <CssBaseline>
+            <App />
+          </CssBaseline>
+        </ThemeProvider>
+      </Provider>
+    </I18nextProvider>
   </React.StrictMode>,
   document.getElementById('root')
 )

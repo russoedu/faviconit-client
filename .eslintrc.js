@@ -5,29 +5,29 @@ module.exports = {
   env:    {
     browser: true,
     jest:    true,
-    es2021:  true
+    es2021:  true,
   },
   extends: [
     'plugin:@typescript-eslint/recommended',
     'eslint:recommended',
     'plugin:react/recommended',
-    'plugin:react/jsx-runtime'
+    'plugin:react/jsx-runtime',
   ],
   settings: {
     react: {
-      version: 'detect'
+      version: 'detect',
     },
   },
   parserOptions: {
     ecmaFeatures: {
-      jsx: true
+      jsx: true,
     },
     ecmaVersion: 'latest',
-    sourceType:  'module'
+    sourceType:  'module',
   },
   plugins: [
     'react',
-    '@typescript-eslint'
+    '@typescript-eslint',
   ],
   globals: {
     React:   true,
@@ -52,28 +52,28 @@ module.exports = {
     'comma-dangle':                [
       'error',
       {
-        arrays:    'only-multiline',
-        objects:   'only-multiline',
-        imports:   'never',
-        exports:   'never',
-        functions: 'never'
-      }
+        arrays:    'always-multiline',
+        objects:   'always-multiline',
+        imports:   'always-multiline',
+        exports:   'always-multiline',
+        functions: 'never',
+      },
     ],
     'key-spacing': [
       'error',
       {
-        align: 'value'
-      }
+        align: 'value',
+      },
     ],
     '@typescript-eslint/explicit-module-boundary-types': 'off',
     '@typescript-eslint/no-explicit-any':                'off',
     '@typescript-eslint/no-unused-vars':                 [
       'error',
       {
-        varsIgnorePattern: '^env$|^_.+?'
-      }
+        varsIgnorePattern: '^env$|^_.+?',
+      },
     ],
     'multiline-comment-style': ['error', 'starred-block'],
-    'quotes':                  ['error', 'single']
-  }
+    'quotes':                  ['error', 'single'],
+  },
 }
