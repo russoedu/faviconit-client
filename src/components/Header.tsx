@@ -39,7 +39,6 @@ export function Header () {
       <Container maxWidth="xl">
         <Toolbar disableGutters sx={{ justifyContent: 'start', display: 'flex' }}>
           <Logo/>
-
           <ButtonsGroup buttons={socialLinks} />
 
           <LanguageSelector/>

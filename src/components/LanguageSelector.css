@@ -1,12 +1,12 @@
-.lng-get-links-compact {
-  padding-left: 0!important;
-  padding-right: 0!important;
-  min-width: 50px!important;
-  min-height: 36.5px!important;
-}
-.lng-get-links-icon {
-  font-size: 20px;
-  display: inherit;
+@media (max-width: 1200px) {
+  #lng-button > span.MuiButton-endIcon {
+    margin: 0;
+    font-size: 20px;
+  }
+  #lng-button-text {
+    display: none!important;
+  }
+  
 }
 
 .lng-item {

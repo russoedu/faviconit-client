@@ -1,4 +1,4 @@
-import { Box, Button, Menu, MenuItem } from '@mui/material'
+import { Button, Menu, MenuItem } from '@mui/material'
 import { FaLanguage } from 'react-icons/fa'
 import { MouseEvent, useState } from 'react'
 import { useAppDispatch } from '../redux/hooks'
@@ -21,33 +21,19 @@ export function LanguageSelector() {
     setAnchorElNav(null)
   }
   return (
-    <Box
-      className='header-language-selector'
-      sx={{ flexGrow: 0 }}
-    >
+    <>
       <Button
-        className='lng-get-links'
+        id='lng-button'
         color='primary'
         variant='contained'
-        sx={{ display: { lg: 'flex', xs: 'none' } }}
         endIcon={<FaLanguage/>}
         onClick={handleOpenNavMenu}
       >
-        {t('language.native')}
-      </Button>
-      <Button
-        className='lng-get-links lng-get-links-compact'
-        color='primary'
-        variant='contained'
-        sx={{ display: { md: 'flex', lg: 'none' }, paddingRight: '10px' }}
-        onClick={handleOpenNavMenu}
-      >
-        <span className='lng-get-links-icon'>
-          <FaLanguage/>
+        <span id='lng-button-text'>
+          {t('language.native')}
         </span>
       </Button>
       <Menu
-        id="menu-appbar"
         anchorEl={anchorElNav}
         anchorOrigin={{
           vertical:   'bottom',
@@ -84,6 +70,6 @@ export function LanguageSelector() {
           </div>
         </MenuItem> */}
       </Menu>
-    </Box>
+    </>
   )
 }
