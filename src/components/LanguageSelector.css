@@ -1,6 +1,18 @@
+#lng-button {
+  margin-left: 1em;
+}
+#lng-button[dir="rtl"] {
+  margin-left: 0;
+}
+
+#lng-button[dir="rtl"] > span.MuiButton-endIcon {
+  margin-left: -4px;
+  margin-right: 8px;
+}
+
 @media (max-width: 1200px) {
   #lng-button > span.MuiButton-endIcon {
-    margin: 0;
+    margin: 0!important;
     font-size: 20px;
   }
   #lng-button-text {

@@ -1,20 +1,20 @@
 import { Container, Paper } from '@mui/material'
 import { useSelector } from 'react-redux'
-import { selectLanguage } from '../redux/languageReducer'
+import { languageSelector } from '../redux/languageReducer'
 import { useTranslation, getI18n } from 'react-i18next'
 // import { Link } from 'react-router-dom'
 import './Home.css'
 
 
 export function Home () {
-  const language = useSelector(selectLanguage)
+  const language = useSelector(languageSelector)
   const { t } = useTranslation()
   return (
     <Container className='container'>
       <Paper className='readme' elevation={3}>
-        <h1>hi {t('general.ogTitle')} there - {language}</h1>
+        <h1>hi {t('general.ogTitle')} there - {language.key}</h1>
         <p>
-          {getI18n().language} - {getI18n().dir(language)}
+          {getI18n().language} - {language.dir}
         </p>
         <p>
           <a href='https://www.npmjs.com/package/font-color-contrast' target='_blank' rel='noreferrer'>

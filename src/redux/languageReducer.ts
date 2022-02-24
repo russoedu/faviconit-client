@@ -3,11 +3,13 @@ import { RootState } from './store'
 import i18n from '../i18n/i18n'
 
 export interface LanguageState {
-  value: string;
+  key: string
+  dir: 'rtl'|'ltr'
 }
 
 const initialState: LanguageState = {
-  value: 'en',
+  key: 'en',
+  dir: 'ltr',
 }
 
 export const languageSlice = createSlice({
@@ -17,8 +19,9 @@ export const languageSlice = createSlice({
   reducers: {
     // Use the PayloadAction type to declare the contents of `action.payload`
     set: (state, action: PayloadAction<string>) => {
-      state.value = action.payload
-      i18n.changeLanguage(state.value)
+      state.key = action.payload
+      i18n.changeLanguage(state.key)
+      state.dir = i18n.dir(state.key)
     },
   },
 })
@@ -30,6 +33,6 @@ export const { set } = languageSlice.actions
  * the state. Selectors can also be defined inline where they're used instead of
  * in the slice file. For example: `useSelector((state: RootState) => state.counter.value)`
  */
-export const selectLanguage = (state: RootState) => state.language.value
+export const languageSelector = (state: RootState) => state.language
 
 export default languageSlice.reducer

@@ -1,14 +1,16 @@
 import { Button, Menu, MenuItem } from '@mui/material'
 import { FaLanguage } from 'react-icons/fa'
 import { MouseEvent, useState } from 'react'
-import { useAppDispatch } from '../redux/hooks'
-import { set } from '../redux/languageReducer'
+import { useAppDispatch, useAppSelector } from '../redux/hooks'
+import { languageSelector, set } from '../redux/languageReducer'
 import { useTranslation, getI18n } from 'react-i18next'
 import { languages } from '../i18n/i18n'
 import './LanguageSelector.css'
 
 export function LanguageSelector() {
   const [anchorElNav, setAnchorElNav] = useState<null | HTMLElement>(null)
+  const language = useAppSelector(languageSelector)
+
   const dispatch = useAppDispatch()
   const { t } = useTranslation()
 
@@ -16,8 +18,8 @@ export function LanguageSelector() {
     setAnchorElNav(event.currentTarget)
   }
 
-  const handleCloseNavMenu = (language?: string) => {
-    if (language) dispatch(set(language))
+  const handleCloseNavMenu = (lng?: string) => {
+    if (lng) dispatch(set(lng))
     setAnchorElNav(null)
   }
   return (
@@ -28,6 +30,7 @@ export function LanguageSelector() {
         variant='contained'
         endIcon={<FaLanguage/>}
         onClick={handleOpenNavMenu}
+        dir={language.dir}
       >
         <span id='lng-button-text'>
           {t('language.native')}
@@ -47,28 +50,27 @@ export function LanguageSelector() {
         open={Boolean(anchorElNav)}
         onClose={() => handleCloseNavMenu()}
       >
-        {languages.map((language) => (
+        {languages.map((lng) => (
           <MenuItem
-            key={language.link}
-            onClick={() => handleCloseNavMenu(language.link)}
-            className={getI18n().language.includes(language.link) ? 'lng-item-selected' : ''}
+            key={lng.key}
+            onClick={() => handleCloseNavMenu(lng.key)}
+            className={getI18n().language.includes(lng.key) ? 'lng-item-selected' : ''}
           >
             <div
-              dir={getI18n().dir(language.link)}
+              dir={getI18n().dir(lng.key)}
               className='lng-item'
             >
-              {language.native}
+              {lng.native}
             </div>
           </MenuItem>
         ))}
-        {/* <MenuItem key='translate' onClick={() => handleCloseNavMenu('translate')}>
+        <MenuItem key='translate' onClick={() => handleCloseNavMenu('translate')}>
           <div
-            dir={getI18n().dir()}
             className='lng-item'
           >
             {t('general.helpUsTranslate')}
           </div>
-        </MenuItem> */}
+        </MenuItem>
       </Menu>
     </>
   )

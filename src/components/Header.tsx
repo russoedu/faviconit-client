@@ -4,6 +4,8 @@ import { FaTwitter, FaFacebook, FaLinkedin, FaPinterest } from 'react-icons/fa'
 import { Logo } from './Logo'
 import { ButtonsGroup } from './ButtonsGroup'
 import { LanguageSelector } from './LanguageSelector'
+import { languageSelector } from '../redux/languageReducer'
+import { useAppSelector } from '../redux/hooks'
 
 const socialLinks = [
   {
@@ -33,14 +35,14 @@ const socialLinks = [
 ]
 
 export function Header () {
+  const language = useAppSelector(languageSelector)
 
   return (
-    <AppBar position='sticky' enableColorOnDark>
+    <AppBar position='sticky' enableColorOnDark dir={language.dir}>
       <Container maxWidth="xl">
         <Toolbar disableGutters sx={{ justifyContent: 'start', display: 'flex' }}>
           <Logo/>
-          <ButtonsGroup buttons={socialLinks} />
-
+          <ButtonsGroup buttons={socialLinks}/>
           <LanguageSelector/>
         </Toolbar>
       </Container>

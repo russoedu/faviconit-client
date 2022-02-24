@@ -1,0 +1,32 @@
+#btg-social-group[dir="rtl"] > a {
+  border-radius: 0;
+  /* border: 2px solid red; */
+}
+
+#btg-social-group[dir="rtl"] > a:nth-child(1){
+  border-top-right-radius: 4px;
+  border-bottom-right-radius: 4px;
+}
+
+#btg-social-group[dir="rtl"] > a:last-child {
+  border-top-left-radius: 4px;
+  border-bottom-left-radius: 4px;
+  border-right: 1px solid #bdbdbd;
+  border-color: rgb(75, 20, 153);
+}
+
+#btg-social-group[dir="rtl"] > a > span.MuiButton-startIcon {
+  margin-right: -4px;
+  margin-left: 8px;
+}
+
+@media (max-width: 1200px) {
+  .btg-button > span.MuiButton-startIcon {
+    margin: 0!important;
+    font-size: 20px;
+  }
+  .btg-button-text {
+    display: none!important;
+  }
+  
+}
