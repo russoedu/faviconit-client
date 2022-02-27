@@ -73,7 +73,7 @@ export function LanguageSelector() {
           <div
             className='lng-item'
           >
-            {t('general.helpUsTranslate')}
+            {t('language.helpUsTranslate')}
           </div>
         </MenuItem>
       </Menu>

@@ -1,15 +1,14 @@
 {
   "language": {
     "name": "Swedish",
-    "script": "Latin",
     "native": "Svenska",
+    "helpUsTranslate": "hjälp oss att översätta 😀",
     "social": "sv_SE"
   },
-  "general": {
+  "head": {
+    "title": "faviconit :: gratis favicon- och apple touch ikon-skapare för alla apparater och webbläsare",
     "ogTitle": "gratis favicon- och apple touch ikon-skapare",
-    "ogDescription": "ladda upp en bild för att skapa ikoner (favicons, apple touch icons) och den HTML-kod som behövs för att de skall fungera med alla apparater och webbläsare",
-    "helpUsTranslate": "hjälp oss att översätta 😀",
-    "pageTitle": "faviconit :: gratis favicon- och apple touch ikon-skapare för alla apparater och webbläsare"
+    "description": "ladda upp en bild för att skapa ikoner (favicons, apple touch icons) och den HTML-kod som behövs för att de skall fungera med alla apparater och webbläsare"
   },
   "home": {
     "meta": "ladda upp en bild för att skapa ikoner (favicons, apple touch icons) och den HTML-kod som behövs för att de skall fungera med alla apparater och webbläsare",

@@ -1,15 +1,14 @@
 {
   "language": {
     "name": "Portuguese",
-    "script": "Latin",
     "native": "Português",
+    "helpUsTranslate": "ajude-nos a traduzir 😀",
     "social": "pt_BR"
   },
-  "general": {
+  "head": {
+    "title": "faviconit :: criador grátis de favicon & apple touch icon para todos dispositivos e navegadores",
     "ogTitle": "criador grátis de favicon & apple touch icon",
-    "ogDescription": "carregue uma imagem para criar favicons, apple touch icons e o header de HTML correto para funcionarem em todos dispositivos e navegadores",
-    "helpUsTranslate": "ajude-nos a traduzir 😀",
-    "pageTitle": "faviconit :: criador grátis de favicon & apple touch icon para todos dispositivos e navegadores"
+    "description": "carregue uma imagem para criar favicons, apple touch icons e o header de HTML correto para funcionarem em todos dispositivos e navegadores"
   },
   "home": {
     "meta": "carregue uma imagem para criar favicons, apple touch icons e o header de HTML correto para funcionarem em todos dispositivos e navegadores",

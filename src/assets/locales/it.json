@@ -1,15 +1,14 @@
 {
   "language": {
     "name": "Italian",
-    "script": "Latin",
     "native": "Italiano",
+    "helpUsTranslate": "aiutaci a tradurre 😀",
     "social": "it_IT"
   },
-  "general": {
+  "head": {
+    "title": "faviconit :: generatore gratuito di favicon e icone apple-touch per tutti i browser e dispositivi",
     "ogTitle": "generatore gratuito di favicon e icone apple-touch",
-    "ogDescription": "carica un'immagine per creare favicon, icone apple-touch e i corretti header HTML per utilizzarle con tutti i browser e dispositivi",
-    "helpUsTranslate": "aiutaci a tradurre 😀",
-    "pageTitle": "faviconit :: generatore gratuito di favicon e icone apple-touch per tutti i browser e dispositivi"
+    "description": "carica un'immagine per creare favicon, icone apple-touch e i corretti header HTML per utilizzarle con tutti i browser e dispositivi"
   },
   "home": {
     "meta": "carica un'immagine per creare favicon, icone apple-touch e i corretti header HTML per utilizzarle con tutti i browser e dispositivi",

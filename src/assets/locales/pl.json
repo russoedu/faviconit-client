@@ -1,15 +1,14 @@
 {
   "language": {
     "name": "Polish",
-    "script": "Latin",
     "native": "Język polski",
+    "helpUsTranslate": "pomóż nam tłumaczyć 😀",
     "social": "pl_PL"
   },
-  "general": {
+  "head": {
+    "title": "faviconit :: darmowy kreator favicon, ikon apple touch - na wszystkie urządzenia i przeglądarki",
     "ogTitle": "darmowy kreator favicon i ikon apple touch",
-    "ogDescription": "wgraj grafikę, by utworzyć faviconę, ikonę apple touch i poprawny nagłówek HTML działający na wszystkich urządzeniach i przeglądarkach",
-    "helpUsTranslate": "pomóż nam tłumaczyć 😀",
-    "pageTitle": "faviconit :: darmowy kreator favicon, ikon apple touch - na wszystkie urządzenia i przeglądarki"
+    "description": "wgraj grafikę, by utworzyć faviconę, ikonę apple touch i poprawny nagłówek HTML działający na wszystkich urządzeniach i przeglądarkach"
   },
   "home": {
     "meta": "wgraj grafikę, by utworzyć faviconę, ikonę apple touch i poprawny nagłówek HTML działający na wszystkich urządzeniach i przeglądarkach",

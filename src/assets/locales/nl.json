@@ -1,15 +1,14 @@
 {
   "language": {
     "name": "Dutch",
-    "script": "Latin",
     "native": "Nederlands",
+    "helpUsTranslate": "help ons met vertalen 😀",
     "social": "nl_NL"
   },
-  "general": {
+  "head": {
+    "title": "faviconit :: gratis favicon & apple touch icoon generator voor alle apparaten en browsers",
     "ogTitle": "gratis favicon & Apple Touch Icoon generator",
-    "ogDescription": "upload een afbeelding om favicons, Apple Touch Iconen en een HTML header te maken voor alle apparaten en browsers.",
-    "helpUsTranslate": "help ons met vertalen 😀",
-    "pageTitle": "faviconit :: gratis favicon & apple touch icoon generator voor alle apparaten en browsers"
+    "description": "upload een afbeelding om favicons, Apple Touch Iconen en een HTML header te maken voor alle apparaten en browsers."
   },
   "home": {
     "meta": "upload een afbeelding om favicons, Apple Touch Iconen en een HTML header te maken voor alle apparaten en browsers.",

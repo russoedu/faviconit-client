@@ -1,15 +1,14 @@
 {
   "language": {
     "name": "Slovak",
-    "script": "Latin",
     "native": "Slovenčina",
+    "helpUsTranslate": "pomôžte nám s prekladom 😀",
     "social": "sk_SK"
   },
-  "general": {
+  "head": {
+    "title": "faviconit :: bezplatný nástroj na tvorbu favicon & apple touch icon pre všetky zariadenia a prehliadače",
     "ogTitle": "bezplatný nástroj pre tvorbu favicon & apple touch icon",
-    "ogDescription": "nahrajte obrázok pre vytvorenie favicon, apple touch icon a HTML hlavičiek, fungujúce vo všetkých zariadeniach a prehliadačoch ",
-    "helpUsTranslate": "pomôžte nám s prekladom 😀",
-    "pageTitle": "faviconit :: bezplatný nástroj na tvorbu favicon & apple touch icon pre všetky zariadenia a prehliadače"
+    "description": "nahrajte obrázok pre vytvorenie favicon, apple touch icon a HTML hlavičiek, fungujúce vo všetkých zariadeniach a prehliadačoch "
   },
   "home": {
     "meta": "nahrajte obrázok pre vytvorenie favicon, apple touch icon a HTML hlavičiek, fungujúce vo všetkých zariadeniach a prehliadačoch ",

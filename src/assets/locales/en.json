@@ -1,15 +1,14 @@
 {
   "language": {
     "name": "English",
-    "script": "Latin",
     "native": "English",
+    "helpUsTranslate": "help us translating 😀",
     "social": "en_US"
   },
-  "general": {
+  "head": {
+    "title": "faviconit :: free favicon & apple touch icon generator for all devices and browsers",
     "ogTitle": "free favicon & apple touch icon generator",
-    "ogDescription": "upload an image to generate favicons, apple touch icons and the correct HTML header to make it work with all devices and browsers",
-    "helpUsTranslate": "help us translating 😀",
-    "pageTitle": "faviconit :: free favicon & apple touch icon generator for all devices and browsers"
+    "description": "upload an image to generate favicons, apple touch icons and the correct HTML header to make it work with all devices and browsers"
   },
   "home": {
     "meta": "upload an image to generate favicons, apple touch icons and the correct HTML header to make it work with all devices and browsers",

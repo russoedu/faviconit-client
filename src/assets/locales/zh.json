@@ -1,15 +1,14 @@
 {
   "language": {
     "name": "Chinese",
-    "script": "Chinese",
     "native": "中文（简体）",
+    "helpUsTranslate": "请帮助我们翻译 😀",
     "social": "zh_CN"
   },
-  "general": {
+  "head": {
+    "title": "faviconit :: 免费的favicon和apple touch icon生成器，适用于所有设备和浏览器",
     "ogTitle": "免费的favicon和apple touch icon生成器",
-    "ogDescription": "上传图标，生成favicon、apple touch icon和相应的HTML header，让你的图标适用于所有设备和浏览器",
-    "helpUsTranslate": "请帮助我们翻译 😀",
-    "pageTitle": "faviconit :: 免费的favicon和apple touch icon生成器，适用于所有设备和浏览器"
+    "description": "上传图标，生成favicon、apple touch icon和相应的HTML header，让你的图标适用于所有设备和浏览器"
   },
   "home": {
     "meta": "上传图标，生成favicon、apple touch icon和相应的HTML header，让你的图标适用于所有设备和浏览器",

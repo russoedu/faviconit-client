@@ -1,15 +1,14 @@
 {
   "language": {
     "name": "Romanian",
-    "script": "Latin",
     "native": "Limba română",
+    "helpUsTranslate": "ajutatine sa traducem 😀",
     "social": "ro_RO"
   },
-  "general": {
+  "head": {
+    "title": "faviconit :: favicon gratis & creator de imagini apple touch pentru toate dispozitivele și browsere",
     "ogTitle": "favicon gratis & creator imagini apple touch",
-    "ogDescription": "încărcați o imagine ca sa creați favicons, imagini apple touche și codul HTML corect ca sa funcționeze cu toate navigatoarele internet",
-    "helpUsTranslate": "ajutatine sa traducem 😀",
-    "pageTitle": "faviconit :: favicon gratis & creator de imagini apple touch pentru toate dispozitivele și browsere"
+    "description": "încărcați o imagine ca sa creați favicons, imagini apple touche și codul HTML corect ca sa funcționeze cu toate navigatoarele internet"
   },
   "home": {
     "meta": "încărcați o imagine ca sa creați favicons, imagini apple touche și codul HTML corect ca sa funcționeze cu toate navigatoarele internet",

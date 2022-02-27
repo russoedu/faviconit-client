@@ -1,15 +1,14 @@
 {
   "language": {
     "name": "German",
-    "script": "Latin",
     "native": "Deutsch",
+    "helpUsTranslate": "Hilf uns mit der Übersetzung 😀",
     "social": "de_DE"
   },
-  "general": {
+  "head": {
+    "title": "faviconit :: freier Favicon & Apple-Touch-Icon Generator für alle Geräte und Web-Browser",
     "ogTitle": "Freier Favicon & Apple-Touch-Icon Generator",
-    "ogDescription": "Lade ein Bild hoch, um Favicons, Apple-Touch-Icons und den korrekten HTML-Header zu erzeugen. Das Ergebnis funktioniert dann auf allen Geräten und Web-Browsern.",
-    "helpUsTranslate": "Hilf uns mit der Übersetzung 😀",
-    "pageTitle": "faviconit :: freier Favicon & Apple-Touch-Icon Generator für alle Geräte und Web-Browser"
+    "description": "Lade ein Bild hoch, um Favicons, Apple-Touch-Icons und den korrekten HTML-Header zu erzeugen. Das Ergebnis funktioniert dann auf allen Geräten und Web-Browsern."
   },
   "home": {
     "meta": "Lade ein Bild hoch, um Favicons, Apple-Touch-Icons und den korrekten HTML-Header zu erzeugen. Das Ergebnis funktioniert dann auf allen Geräten und Web-Browsern.",

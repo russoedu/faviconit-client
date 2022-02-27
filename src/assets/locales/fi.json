@@ -1,15 +1,14 @@
 {
   "language": {
     "name": "Finnish",
-    "script": "Latin",
     "native": "Suomi",
+    "helpUsTranslate": "Auta kääntämään 😀",
     "social": "fi_FI"
   },
-  "general": {
+  "head": {
+    "title": "faviconit :: ilmainen favicon & apple touch ikonien luoja kaille laitteille ja selaimille",
     "ogTitle": "ilmainen favicon & apple touch kuvan luoja",
-    "ogDescription": "lataa kuvasi ja tee siitä favicon & apple touch iconien joka toimii kaikilla laiteilla ja selaimille.",
-    "helpUsTranslate": "Auta kääntämään 😀",
-    "pageTitle": "faviconit :: ilmainen favicon & apple touch ikonien luoja kaille laitteille ja selaimille"
+    "description": "lataa kuvasi ja tee siitä favicon & apple touch iconien joka toimii kaikilla laiteilla ja selaimille."
   },
   "home": {
     "meta": "lataa kuvasi ja tee siitä favicon & apple touch iconien joka toimii kaikilla laiteilla ja selaimille.",
