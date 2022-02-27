@@ -1,25 +1,30 @@
 import { Button, Menu, MenuItem } from '@mui/material'
 import { FaLanguage } from 'react-icons/fa'
 import { MouseEvent, useState } from 'react'
-import { useAppDispatch, useAppSelector } from '../redux/hooks'
-import { languageSelector, set } from '../redux/languageReducer'
-import { useTranslation, getI18n } from 'react-i18next'
-import { languages } from '../i18n/i18n'
+import i18n, { languages } from '../i18n/i18n'
 import './LanguageSelector.css'
+import { useTranslation } from 'react-i18next'
+import { useNavigate } from 'react-router-dom'
 
 export function LanguageSelector() {
   const [anchorElNav, setAnchorElNav] = useState<null | HTMLElement>(null)
-  const language = useAppSelector(languageSelector)
-
-  const dispatch = useAppDispatch()
+  const navigate = useNavigate()
   const { t } = useTranslation()
+
 
   const handleOpenNavMenu = (event: MouseEvent<HTMLElement>) => {
     setAnchorElNav(event.currentTarget)
   }
 
   const handleCloseNavMenu = (lng?: string) => {
-    if (lng) dispatch(set(lng))
+    if (lng) {
+      const currentPathname = window.location.pathname.replace(/\/+$/, '')
+      console.log(currentPathname)
+      console.log(lng)
+
+      i18n.changeLanguage(lng)
+      navigate(lng, { replace: true })
+    }
     setAnchorElNav(null)
   }
   return (
@@ -30,7 +35,7 @@ export function LanguageSelector() {
         variant='contained'
         endIcon={<FaLanguage/>}
         onClick={handleOpenNavMenu}
-        dir={language.dir}
+        dir={i18n.dir()}
       >
         <span id='lng-button-text'>
           {t('language.native')}
@@ -54,10 +59,10 @@ export function LanguageSelector() {
           <MenuItem
             key={lng.key}
             onClick={() => handleCloseNavMenu(lng.key)}
-            className={getI18n().language.includes(lng.key) ? 'lng-item-selected' : ''}
+            className={i18n.language.includes(lng.key) ? 'lng-item-selected' : ''}
           >
             <div
-              dir={getI18n().dir(lng.key)}
+              dir={i18n.dir(lng.key)}
               className='lng-item'
             >
               {lng.native}

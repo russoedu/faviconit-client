@@ -1,20 +1,16 @@
 import { Container, Paper } from '@mui/material'
-import { useSelector } from 'react-redux'
-import { languageSelector } from '../redux/languageReducer'
-import { useTranslation, getI18n } from 'react-i18next'
-// import { Link } from 'react-router-dom'
+import { useTranslation } from 'react-i18next'
 import './Home.css'
 
 
 export function Favicon () {
-  const language = useSelector(languageSelector)
-  const { t } = useTranslation()
+  const { t, i18n } = useTranslation()
   return (
     <Container className='container'>
       <Paper className='readme' elevation={3}>
         <h1>{t('general.ogTitle')}</h1>
         <p>
-          {getI18n().language} - {language.dir}
+          {i18n.language} - {i18n.dir()}
         </p>
       </Paper>
     </Container>

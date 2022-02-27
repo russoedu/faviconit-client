@@ -1,11 +1,8 @@
 import { Helmet } from 'react-helmet'
 import { useTranslation } from 'react-i18next'
-import { useAppSelector } from '../redux/hooks'
-import { languageSelector } from '../redux/languageReducer'
 
 export const HtmlHead = function HtmlHead () {
-  const language = useAppSelector(languageSelector)
-  const { t } = useTranslation()
+  const { t, i18n } = useTranslation()
 
   /*
    * Include lang refs
@@ -18,7 +15,7 @@ export const HtmlHead = function HtmlHead () {
    */
   return (
     <Helmet>
-      <html lang={language.key} dir={language.dir}/>
+      <html lang={i18n.language} dir={i18n.dir()}/>
       <title>{t('general.pageTitle')}</title>
       <meta name='Description' content={t('home.meta')} />
       <meta name='twitter:site:id' content='2318538170' />
@@ -27,7 +24,7 @@ export const HtmlHead = function HtmlHead () {
       <meta property='og:type' content='website' />
       <meta property='og:title' content={t('general.ogTitle')} />
       <meta property='og:description' content={t('home.meta')} />
-      <meta property='og:locale' content={language.key} />
+      <meta property='og:locale' content={i18n.language} />
     </Helmet>
   )
 }

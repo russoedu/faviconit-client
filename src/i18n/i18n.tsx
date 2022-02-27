@@ -19,8 +19,12 @@ import translationRu from '../assets/locales/ru.json'
 import translationSk from '../assets/locales/sk.json'
 import translationSv from '../assets/locales/sv.json'
 import translationZh from '../assets/locales/zh.json'
+/*
+ * import { set } from '../redux/languageReducer'
+ * import { store } from '../redux/store'
+ */
 
-const resources = {
+const availableLanguages = {
   ar: { translations: translationAr },
   ca: { translations: translationCa },
   de: { translations: translationDe },
@@ -44,11 +48,11 @@ i18n
   .use(LanguageDetector)
   .use(initReactI18next)
   .init({
-    resources,
+    resources:     availableLanguages,
     fallbackLng:   'en',
     ns:            ['translations'],
     defaultNS:     'translations',
-    debug:         true,
+    debug:         false,
     interpolation: {
       escapeValue:     false,
       formatSeparator: '.',
@@ -56,11 +60,14 @@ i18n
     detection: {
       order: ['path', 'navigator'],
     },
+  }, () => {
+    const language = i18n.language.substring(0, 2)
+    i18n.changeLanguage(language)
   })
 
 export default i18n
 
-export const languages = Object.entries(resources)
+export const languages = Object.entries(availableLanguages)
   .map(resource => ({
     key:    resource[0],
     name:   resource[1].translations.language.name,
