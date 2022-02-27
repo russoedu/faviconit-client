@@ -4,18 +4,16 @@
   margin: 1em 0;
 }
 
-#logo img {
+#logo svg {
   height: 60px;
-}
-.logo-small {
-  display: none;
+  width: 405px;
 }
 
 @media (max-width: 800px) {
-  .logo-large {
-    display: none;
+  #logo svg {
+    width: 60px;
   }
-  .logo-small {
-    display: block;
+  #favicon, #it {
+    display: none;
   }
 }
