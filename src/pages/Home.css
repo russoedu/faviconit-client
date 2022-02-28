@@ -1,13 +1,12 @@
-a > img {
-  padding-right: 10px;
+h1 {
+  font-weight: 400;
 }
 
-.readme {
-  padding: 0.1em 4% 4% 4%;
+.content {
+  padding: 0.1em 4% 0.1em 4%;
   margin: 1em 0;
 }
 
-.formula {
-  filter: invert(100%) saturate(100%) brightness(100%) contrast(100%);
-  max-width: 100%;
+.advanced {
+  display: block;
 }

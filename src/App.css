@@ -1,39 +1,22 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=DM+Mono:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DM+Mono:ital,wght@1,500&family=Fredoka&display=swap');
+
+body {
+  margin: 0!important;
+  font-family: 'Fredoka', 'Roboto', sans-serif!important;
+  -webkit-font-smoothing: antialiased!important;
+  -moz-osx-font-smoothing: grayscale!important;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.brand, .orange {
+  font-family: 'DM Mono', monospace;
+  font-weight: 500;
+  font-style: italic;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-float infinite 3s ease-in-out;
-  }
+.brand {
+  color: #6C1DDB;
 }
-
-.App-header {
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-}
-
-.App-link {
-  color: rgb(112, 76, 182);
-}
-
-@keyframes App-logo-float {
-  0% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(10px);
-  }
-  100% {
-    transform: translateY(0px);
-  }
+.orange {
+  color: #FF9500;
 }

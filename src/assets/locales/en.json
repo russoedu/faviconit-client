@@ -11,10 +11,10 @@
     "description": "upload an image to generate favicons, apple touch icons and the correct HTML header to make it work with all devices and browsers"
   },
   "home": {
-    "meta": "upload an image to generate favicons, apple touch icons and the correct HTML header to make it work with all devices and browsers",
-    "socialImage": "free favicon & apple touch icon\ngenerator for all devices and browsers",
     "highlight": "<span class=\"brand\">favicon<span class=\"orange\">it</span></span> generates <i>favicons</i>, <i>apple touch icons</i> and the <i>HTML header</i> to all devices and browsers.",
     "subHighlight": "it's free! the easiest favicon creator you'll ever see. all you have to do is upload an image!",
+    "meta": "upload an image to generate favicons, apple touch icons and the correct HTML header to make it work with all devices and browsers",
+    "socialImage": "free favicon & apple touch icon\ngenerator for all devices and browsers",
     "form": {
       "title": "fill the form and create your favicon for free",
       "file": {

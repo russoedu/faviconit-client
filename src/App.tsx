@@ -1,7 +1,6 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import { Header } from './components/Header'
 
-import './App.css'
 import { ThemeProvider } from '@emotion/react'
 import { createTheme, CssBaseline } from '@mui/material'
 
@@ -9,6 +8,8 @@ import { Home } from './pages/Home'
 import { Favicon } from './pages/Favicon'
 import { LanguageRedirect } from './i18n/LanguageRedirect'
 import { useTranslation } from 'react-i18next'
+
+import './App.css'
 
 export function App() {
   const { i18n } = useTranslation()
