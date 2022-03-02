@@ -1,6 +1,7 @@
 import { Accordion, AccordionDetails, AccordionSummary, Container, FormControl, Input, InputLabel, Paper } from '@mui/material'
 import { useState } from 'react'
 import { useTranslation } from 'react-i18next'
+import { InputImage } from '../components/InputImage'
 import './Home.css'
 
 
@@ -22,19 +23,14 @@ export function Home () {
         <h1>{t('home.form.title')}</h1>
         <hr/>
         <FormControl>
-          <InputLabel htmlFor="my-input">Email address</InputLabel>
-          <Input id="my-input" aria-describedby="my-helper-text" />
+          <InputImage/>
           <Accordion expanded={expanded} onChange={switchAccordion} className='advanced'>
             <AccordionSummary aria-controls="panel1d-content" id="panel1d-header">
               {expanded ? t('home.form.advancedAccordionExpanded') : t('home.form.advancedAccordionColapsed')}
             </AccordionSummary>
             <AccordionDetails>
-              <h1>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
-                malesuada lacus ex, sit amet blandit leo lobortis eget. Lorem ipsum dolor
-                sit amet, consectetur adipiscing elit. Suspendisse malesuada lacus ex,
-                sit amet blandit leo lobortis eget.
-              </h1>
+              <InputLabel htmlFor="my-input">Email address</InputLabel>
+              <Input id="my-input" aria-describedby="my-helper-text" />
             </AccordionDetails>
           </Accordion>
         </FormControl>

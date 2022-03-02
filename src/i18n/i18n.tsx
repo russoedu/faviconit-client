@@ -19,10 +19,6 @@ import translationRu from '../assets/locales/ru.json'
 import translationSk from '../assets/locales/sk.json'
 import translationSv from '../assets/locales/sv.json'
 import translationZh from '../assets/locales/zh.json'
-/*
- * import { set } from '../redux/languageReducer'
- * import { store } from '../redux/store'
- */
 
 const availableLanguages = {
   ar: { translations: translationAr },

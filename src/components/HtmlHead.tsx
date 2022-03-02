@@ -1,22 +1,23 @@
 import { Helmet } from 'react-helmet'
 import { useTranslation } from 'react-i18next'
+import { languages } from '../i18n/i18n'
 
 export const HtmlHead = function HtmlHead () {
   const { t, i18n } = useTranslation()
 
-  /*
-   * Include lang refs
-   * <xhtml:link
-   *   rel="alternate"
-   *   hreflang="de"
-   *   href="https://www.example.com/deutsch/page.html"/>
-   * 
-   * https://developers.google.com/search/docs/advanced/crawling/international-overview
-   */
+  const languageLinks = languages.map(language => {
+    return (
+      // eslint-disable-next-line react/jsx-key
+      <link rel="alternate" hrefLang={language.key} href={'http://faviconit.com/' + language.key} />
+    )
+  })
+
   return (
     <Helmet>
       <html lang={i18n.language} dir={i18n.dir()}/>
       <title>{t('head.title')}</title>
+      {languageLinks}
+      <link rel="alternate" href="http://faviconit.com/" hrefLang="x-default" />
       <meta name='Description' content={t('head.description')} />
       <meta name='twitter:site:id' content='2318538170' />
       <meta property='og:url' content="http://faviconit.com" />

@@ -4,10 +4,11 @@ import { Header } from './components/Header'
 import { ThemeProvider } from '@emotion/react'
 import { createTheme, CssBaseline } from '@mui/material'
 
-import { Home } from './pages/Home'
-import { Favicon } from './pages/Favicon'
 import { LanguageRedirect } from './i18n/LanguageRedirect'
 import { useTranslation } from 'react-i18next'
+
+import { Home } from './pages/Home'
+import { Favicon } from './pages/Favicon'
 
 import './App.css'
 
