@@ -18,10 +18,12 @@ export function App() {
   const theme = createTheme({
     direction: i18n.dir(),
     palette:   {
-      mode:       'dark',
-      background: {
-        default: '#424242',
-      },
+      mode:    'dark',
+      /*
+       * background: {
+       *   default: '#424242',
+       * },
+       */
       primary: {
         main: '#6C1DDB',
       },

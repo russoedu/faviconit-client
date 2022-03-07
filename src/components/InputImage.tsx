@@ -1,15 +1,61 @@
-import { useDropzone, FileWithPath, FileError } from 'react-dropzone'
+import { useState } from 'react'
+import { useDropzone, FileWithPath, FileError, FileRejection, DropEvent } from 'react-dropzone'
+import { useTranslation } from 'react-i18next'
+
+import './InputImage.css'
+
+enum DragStatus {
+  NONE = 'da-none',
+  DROP = 'da-drop',
+  DROP_ACCEPTED = 'da-drop-accepted',
+  DROP_REJECTED = 'da-drop-rejected',
+  DRAGGING = ' da-dragging',
+}
+
 export function InputImage () {
+  const { t } = useTranslation()
+  const [dragStatus, setDragStatus] = useState(DragStatus.NONE)
+
+  function handleDrop<T extends File>(acceptedFiles: T[], fileRejections: FileRejection[], event: DropEvent) {
+    console.log(acceptedFiles)
+    console.log(fileRejections)
+    console.log(event)
+  }
+  function handleDropAccepted<T extends File>(acceptedFiles: T[], event: DropEvent) {
+    setDragStatus(DragStatus.DROP_ACCEPTED)
+    console.log(acceptedFiles)
+    console.log(event)
+  }
+  function handleDropRejected(fileRejections: FileRejection[], event: DropEvent) {
+    setDragStatus(DragStatus.DROP_REJECTED)
+    console.log(fileRejections)
+    console.log(event)
+  }
+  function handleDragEvents (a: any) {
+    console.log()
+    if (a._reactName === 'onDragOver' || a._reactName === 'onDragEnter') {
+      setDragStatus(DragStatus.DRAGGING)
+    } else if (a._reactName === 'onDragLeave') {
+      setDragStatus(DragStatus.NONE)
+    }
+  }
+
   const {
     acceptedFiles,
     fileRejections,
     getRootProps,
     getInputProps,
   } = useDropzone({
-    accept: process.env.REACT_APP_ACCEPTED_FILE_TYPES,
+    accept:         process.env.REACT_APP_ACCEPTED_FILE_TYPES,
+    maxFiles:       1,
+    multiple:       false,
+    onDrop:         handleDrop,
+    onDragEnter:    handleDragEvents,
+    onDragLeave:    handleDragEvents,
+    onDragOver:     handleDragEvents,
+    onDropAccepted: handleDropAccepted,
+    onDropRejected: handleDropRejected,
   })
-
-  console.log(process.env.REACT_APP_ACCEPTED_FILE_TYPES)
 
   const acceptedFileItems = acceptedFiles.map((file: FileWithPath) => (
     <li key={file.path}>
@@ -29,11 +75,12 @@ export function InputImage () {
   ))
 
   return (
-    <section className="container" style={{ border: '1px solid white' }}>
-      <div {...getRootProps({ className: 'dropzone' })}>
+    <section className="upload-container">
+      <div {...getRootProps({ className: 'dropzone-area ' + dragStatus })}>
         <input {...getInputProps()} />
-        <p>Drag 'n' drop some files here, or click to select files</p>
-        <em>(Only *.jpeg and *.png images will be accepted)</em>
+        <p dangerouslySetInnerHTML={{ __html: `${t('formFileChoose')} ${t('formFileDragNDrop')}` }}/>
+        <em dangerouslySetInnerHTML={{ __html: t('formFileHelp', { size: '100', max: '10' }) }}/>
+        <p>{dragStatus}</p>
       </div>
       <aside>
         <h4>Accepted files</h4>

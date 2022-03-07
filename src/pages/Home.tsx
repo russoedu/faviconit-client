@@ -1,39 +1,55 @@
-import { Accordion, AccordionDetails, AccordionSummary, Container, FormControl, Input, InputLabel, Paper } from '@mui/material'
-import { useState } from 'react'
+import {  Container, Grid, Input, Paper } from '@mui/material'
 import { useTranslation } from 'react-i18next'
 import { InputImage } from '../components/InputImage'
+import i18n from '../i18n/i18n'
 import './Home.css'
 
 
 export function Home () {
   const { t } = useTranslation()
-  const [expanded, setExpanded] = useState(false)
-
-  function switchAccordion () {
-    setExpanded(!expanded)
-  }
 
   return (
-    <Container className='container'>
-      <Paper className='content' elevation={3}>
-        <h1 dangerouslySetInnerHTML={{ __html: t('home.highlight') }}/>
-        <h1>{t('home.subHighlight')}</h1>
+    <Container className='container' maxWidth={'xl'}>
+      <Paper className='highlight home-paper' elevation={3}>
+        <h1 dangerouslySetInnerHTML={{ __html: t('homeHighlight') }}/>
+        <h1>{t('homeSubHighlight')}</h1>
       </Paper>
-      <Paper className='content' elevation={3}>
-        <h1>{t('home.form.title')}</h1>
+      <Paper className='form home-paper' elevation={3}>
+        <h2>{t('fillTheForm')}</h2>
         <hr/>
-        <FormControl>
-          <InputImage/>
-          <Accordion expanded={expanded} onChange={switchAccordion} className='advanced'>
-            <AccordionSummary aria-controls="panel1d-content" id="panel1d-header">
-              {expanded ? t('home.form.advancedAccordionExpanded') : t('home.form.advancedAccordionColapsed')}
-            </AccordionSummary>
-            <AccordionDetails>
-              <InputLabel htmlFor="my-input">Email address</InputLabel>
-              <Input id="my-input" aria-describedby="my-helper-text" />
-            </AccordionDetails>
-          </Accordion>
-        </FormControl>
+        <Grid container spacing={2}>
+          <Grid item xs={1.5} className='form-label-item'>
+            <p dir={i18n.dir()} className='form-label' id='mandatory'>{t('faviconFile')}</p>
+          </Grid>
+          <Grid item xs={4.5}>
+            <InputImage/>
+          </Grid>
+          <Grid item xs={6}>
+            <Grid container spacing={2}>
+              <Grid item xs={3} className='form-label-item'>
+                <p dir={i18n.dir()} className='form-label'>{t('faviconName')}</p>
+              </Grid>
+              <Grid item xs={9} className='form-input-item'>
+                <Input id="faviconName" className='form-input' aria-describedby="my-helper-text" placeholder={t('faviconNamePlaceholder')}/>
+                <p className='form-help'>{t('faviconNameHelp')}</p>
+              </Grid>
+              <Grid item xs={3} className='form-label-item'>
+                <p dir={i18n.dir()} className='form-label'>{t('faviconVersion')}</p>
+              </Grid>
+              <Grid item xs={9} className='form-input-item'>
+                <Input id="faviconVersion" className='form-input' aria-describedby="my-helper-text" placeholder={t('faviconVersionPlaceholder')}/>
+                <p className='form-help'>{t('faviconVersionHelp')}</p>
+              </Grid>
+              <Grid item xs={3} className='form-label-item'>
+                <p dir={i18n.dir()} className='form-label'>{t('faviconLocation')}</p>
+              </Grid>
+              <Grid item xs={9} className='form-input-item'>
+                <Input id="my-input" className='form-input' aria-describedby="my-helper-text" placeholder={t('faviconLocationPlaceholder')}/>
+                <p className='form-help'>{t('faviconLocationHelp')}</p>
+              </Grid>
+            </Grid>
+          </Grid>
+        </Grid>
       </Paper>
     </Container>
   )

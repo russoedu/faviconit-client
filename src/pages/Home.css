@@ -2,11 +2,43 @@ h1 {
   font-weight: 400;
 }
 
-.content {
-  padding: 0.1em 4% 0.1em 4%;
+.home-paper {
+  background-color: #10051f!important;
+}
+
+.form, .highlight {
+  padding: 0.1em 1em;
   margin: 1em 0;
 }
 
-.advanced {
-  display: block;
+#mandatory::before {
+  content: '* ';
+  color: red;
+}
+
+.form > h2 {
+  text-align: center;
+}
+
+.form > hr {
+  margin: 0 0 2em 0;
+}
+
+.form-input-item, .form-label-item {
+  height: fit-content;
+}
+
+.form-label {
+  text-align: right;
+}
+.form-label[dir="rtl"] {
+  text-align: left;
+}
+
+.form-input {
+  width: 100%;
+}
+.form-help {
+  margin: 0;
+  font-size: 0.85em;
 }

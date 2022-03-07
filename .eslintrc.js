@@ -37,7 +37,7 @@ module.exports = {
   rules: {
     'react/no-unescaped-entities': 'off',
     'no-extra-semi':               'error',
-    'quote-props':                 ['error', 'consistent'],
+    'quote-props':                 ['error', 'as-needed'],
     'indent':                      ['error', 2],
     'react/react-in-jsx-scope':    'off',
     'no-throw-literal':            0,

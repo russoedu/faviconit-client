@@ -1,44 +1,7 @@
 import i18n from 'i18next'
 import { initReactI18next } from 'react-i18next'
 import LanguageDetector from 'i18next-browser-languagedetector'
-
-import translationAr from '../assets/locales/ar.json'
-import translationCa from '../assets/locales/ca.json'
-import translationDe from '../assets/locales/de.json'
-import translationEl from '../assets/locales/el.json'
-import translationEn from '../assets/locales/en.json'
-import translationEs from '../assets/locales/es.json'
-import translationFi from '../assets/locales/fi.json'
-import translationFr from '../assets/locales/fr.json'
-import translationIt from '../assets/locales/it.json'
-import translationNl from '../assets/locales/nl.json'
-import translationPl from '../assets/locales/pl.json'
-import translationPt from '../assets/locales/pt.json'
-import translationRo from '../assets/locales/ro.json'
-import translationRu from '../assets/locales/ru.json'
-import translationSk from '../assets/locales/sk.json'
-import translationSv from '../assets/locales/sv.json'
-import translationZh from '../assets/locales/zh.json'
-
-const availableLanguages = {
-  ar: { translations: translationAr },
-  ca: { translations: translationCa },
-  de: { translations: translationDe },
-  el: { translations: translationEl },
-  en: { translations: translationEn },
-  es: { translations: translationEs },
-  fi: { translations: translationFi },
-  fr: { translations: translationFr },
-  it: { translations: translationIt },
-  nl: { translations: translationNl },
-  pl: { translations: translationPl },
-  pt: { translations: translationPt },
-  ro: { translations: translationRo },
-  ru: { translations: translationRu },
-  sk: { translations: translationSk },
-  sv: { translations: translationSv },
-  zh: { translations: translationZh },
-}
+import { availableLanguages } from './locales'
 
 i18n
   .use(LanguageDetector)
