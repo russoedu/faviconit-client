@@ -10,12 +10,31 @@
       ".gitignore": true,
       "node_modules": true,
       "package-lock.json": true,
-      ".eslintignore": true
+      ".eslintignore": true,
+      ".eslintrc.js": true,
+      "tsconfig.json": true
     },
     "favorites.resources": [
-      "src/App.js",
-      "package.json",
-      ".eslintrc.js"
+      {
+        "filePath": "src/App.js",
+        "group": "Default"
+      },
+      {
+        "filePath": "package.json",
+        "group": "Default"
+      },
+      {
+        "filePath": ".eslintrc.js",
+        "group": "Default"
+      },
+      {
+        "filePath": "tsconfig.json",
+        "group": "Default"
+      },
+      {
+        "filePath": ".gitignore",
+        "group": "Default"
+      }
     ]
   },
   "launch": {
@@ -23,6 +42,12 @@
       {
         "command": "npm start",
         "name": "Start",
+        "request": "launch",
+        "type": "node-terminal"
+      },
+      {
+        "command": "npm run makeManifests",
+        "name": "Make Manifests",
         "request": "launch",
         "type": "node-terminal"
       },

@@ -5,19 +5,20 @@ import { languages } from '../i18n/i18n'
 export const HtmlHead = function HtmlHead () {
   const { t, i18n } = useTranslation()
 
-  const languageLinks = languages.map(language => {
+  const languageLinks = languages.map((language, key) => {
     return (
       // eslint-disable-next-line react/jsx-key
-      <link rel="alternate" hrefLang={language.key} href={'http://faviconit.com/' + language.key} />
+      <link key={key} rel="alternate" hrefLang={language.key} href={'http://faviconit.com/' + language.key} />
     )
   })
 
   return (
     <Helmet>
-      <html lang={i18n.language} dir={i18n.dir()}/>
+      <html lang={i18n.language} dir={i18n.dir()} />
       <title>{t('head.title')}</title>
       {languageLinks}
       <link rel="alternate" href="http://faviconit.com/" hrefLang="x-default" />
+      <link rel="manifest" href={`${i18n.language}.faviconit.webmanifest`} />
       <meta name='Description' content={t('head.description')} />
       <meta name='twitter:site:id' content='2318538170' />
       <meta property='og:url' content="http://faviconit.com" />

@@ -16,17 +16,17 @@ export function InputImage () {
   const { t } = useTranslation()
   const [dragStatus, setDragStatus] = useState(DragStatus.NONE)
 
-  function handleDrop<T extends File>(acceptedFiles: T[], fileRejections: FileRejection[], event: DropEvent) {
+  function handleDrop<T extends File> (acceptedFiles: T[], fileRejections: FileRejection[], event: DropEvent) {
     console.log(acceptedFiles)
     console.log(fileRejections)
     console.log(event)
   }
-  function handleDropAccepted<T extends File>(acceptedFiles: T[], event: DropEvent) {
+  function handleDropAccepted<T extends File> (acceptedFiles: T[], event: DropEvent) {
     setDragStatus(DragStatus.DROP_ACCEPTED)
     console.log(acceptedFiles)
     console.log(event)
   }
-  function handleDropRejected(fileRejections: FileRejection[], event: DropEvent) {
+  function handleDropRejected (fileRejections: FileRejection[], event: DropEvent) {
     setDragStatus(DragStatus.DROP_REJECTED)
     console.log(fileRejections)
     console.log(event)

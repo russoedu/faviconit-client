@@ -6,7 +6,7 @@ import './LanguageSelector.css'
 import { useTranslation } from 'react-i18next'
 import { useNavigate } from 'react-router-dom'
 
-export function LanguageSelector() {
+export function LanguageSelector () {
   const [anchorElNav, setAnchorElNav] = useState<null | HTMLElement>(null)
   const navigate = useNavigate()
   const { t } = useTranslation()
@@ -27,6 +27,21 @@ export function LanguageSelector() {
     }
     setAnchorElNav(null)
   }
+  const languagesList = languages.map((lng) => (
+    <MenuItem
+      key={lng.key}
+      lang={lng.key}
+      onClick={() => handleCloseNavMenu(lng.key)}
+      className={i18n.language.includes(lng.key) ? 'lng-item-selected' : ''}
+    >
+      <div
+        dir={i18n.dir(lng.key)}
+        className='lng-item'
+      >
+        {lng.native}
+      </div>
+    </MenuItem>
+  ))
   return (
     <>
       <Button
@@ -37,9 +52,7 @@ export function LanguageSelector() {
         onClick={handleOpenNavMenu}
         dir={i18n.dir()}
       >
-        <span id='lng-button-text'>
-          {t('language.native')}
-        </span>
+        <span id='lng-button-text'>{t('language.native')}</span>
       </Button>
       <Menu
         anchorEl={anchorElNav}
@@ -55,20 +68,7 @@ export function LanguageSelector() {
         open={Boolean(anchorElNav)}
         onClose={() => handleCloseNavMenu()}
       >
-        {languages.map((lng) => (
-          <MenuItem
-            key={lng.key}
-            onClick={() => handleCloseNavMenu(lng.key)}
-            className={i18n.language.includes(lng.key) ? 'lng-item-selected' : ''}
-          >
-            <div
-              dir={i18n.dir(lng.key)}
-              className='lng-item'
-            >
-              {lng.native}
-            </div>
-          </MenuItem>
-        ))}
+        {languagesList}
         <MenuItem key='translate' onClick={() => handleCloseNavMenu('translate')}>
           <div
             className='lng-item'

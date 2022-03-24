@@ -38,7 +38,8 @@ module.exports = {
     'react/no-unescaped-entities': 'off',
     'no-extra-semi':               'error',
     'quote-props':                 ['error', 'as-needed'],
-    'indent':                      ['error', 2],
+    'space-before-function-paren': ['error', 'always'],
+    indent:                        ['error', 2],
     'react/react-in-jsx-scope':    'off',
     'no-throw-literal':            0,
     'no-unused-expressions':       'off',
@@ -48,7 +49,7 @@ module.exports = {
     'array-bracket-spacing':       ['error', 'never'],
     'object-curly-spacing':        ['error', 'always'],
     'no-useless-escape':           'off',
-    'semi':                        ['error','never'],
+    semi:                          ['error','never'],
     'comma-dangle':                [
       'error',
       {
@@ -74,6 +75,6 @@ module.exports = {
       },
     ],
     'multiline-comment-style': ['error', 'starred-block'],
-    'quotes':                  ['error', 'single'],
+    quotes:                    ['error', 'single'],
   },
 }

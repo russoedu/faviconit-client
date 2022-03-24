@@ -12,7 +12,7 @@ import { Favicon } from './pages/Favicon'
 
 import './App.css'
 
-export function App() {
+export function App () {
   const { i18n } = useTranslation()
 
   const theme = createTheme({
